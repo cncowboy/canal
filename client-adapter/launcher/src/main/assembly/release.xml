@@ -52,6 +52,13 @@
             </excludes>
         </fileSet>
         <fileSet>
+            <directory>../kudu/src/main/resources/kudu</directory>
+            <outputDirectory>/conf/kudu</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
             <directory>target</directory>
             <outputDirectory>logs</outputDirectory>
             <excludes>

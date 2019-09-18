@@ -1,5 +1,12 @@
 server:
   port: 8081
+logging:
+  level:
+    org.springframework: WARN
+    com.alibaba.otter.canal.client.adapter.hbase: DEBUG
+    com.alibaba.otter.canal.client.adapter.es: DEBUG
+    com.alibaba.otter.canal.client.adapter.rdb: DEBUG
+    com.alibaba.otter.canal.client.adapter.kudu: DEBUG
 spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
@@ -63,4 +70,6 @@ canal.conf:
 #          mode: transport # or rest
 #          # security.auth: test:123456 #  only used for rest mode
 #          cluster.name: elasticsearch
-
+#      - name: kudu
+#        properties:
+#          cluster: 192.168.199.3:7051,192.168.199.5:7051,192.168.199.4:7051
